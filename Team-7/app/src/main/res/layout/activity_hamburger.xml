@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Hamburger">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/profileArea"
+        android:background="#F2F5FE"/>
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="20dp"
+        android:src="@drawable/user_img_round"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_marginTop="95dp"
+        android:id="@+id/username"
+        android:text="Joel Miller"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:paddingStart="20dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="26dp"
+        android:layout_marginTop="120dp"
+        android:id="@+id/email"
+        android:text="jmiller@lastofus.com"
+        android:paddingStart="20dp"
+        />
+
+    <Button
+        android:id="@+id/profilebtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/profileArea"
+        android:backgroundTint="@color/white"
+        android:drawableLeft="@drawable/user"
+        android:onClick="EditProfileBtn"
+        android:text="Profile"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textSize="18sp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/aboutbtn"
+        android:layout_below="@+id/profilebtn"
+        android:text="About App"
+        android:textSize="18sp"
+        android:backgroundTint="@color/white"
+        android:textAllCaps="false"
+        android:textAlignment="textStart"
+        android:drawableLeft="@drawable/info" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/logoutbtn"
+        android:layout_below="@+id/aboutbtn"
+        android:text="Logout"
+        android:textSize="18sp"
+        android:backgroundTint="@color/white"
+        android:textAllCaps="false"
+        android:textAlignment="textStart"
+        android:drawableLeft="@drawable/logout" />
+
+</RelativeLayout>

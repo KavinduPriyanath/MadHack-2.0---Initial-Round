@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.AddTask"
+    android:paddingHorizontal="32dp"
+    android:paddingVertical="50dp">
+
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title" />
+
+    <EditText
+        android:id="@+id/titleInput"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/title"
+        android:textColorHint="@color/black"
+        android:textStyle="bold"
+        android:hint="Birthday Surprise"/>
+
+    <TextView
+        android:id="@+id/notes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleInput"
+        android:layout_marginTop="24dp"
+        android:text="Notes" />
+
+    <EditText
+        android:id="@+id/notesInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/notes"
+        android:textColorHint="@color/black"
+        android:textStyle="bold"
+        android:hint="Need to contact friends and buy butter for the cake"/>
+
+
+    <TextView
+        android:id="@+id/category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/notesInput"
+        android:layout_marginTop="24dp"
+        android:text="Category" />
+
+    <Spinner
+        android:id="@+id/categorySelect"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/category"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        android:contentDescription="dropdown"
+        />
+
+    <LinearLayout
+        android:id="@+id/reminderLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp"
+        android:layout_below="@id/categorySelect">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Set a Reminder"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_weight="2"/>
+
+        <Switch
+            android:id="@+id/simpleSwitch"
+            android:layout_width="48dp"
+            android:layout_height="48dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dateNtime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="18dp"
+        android:layout_below="@id/reminderLayout">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Due Date"/>
+
+            <EditText
+                android:id="@+id/dueDate"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:textColorHint="@color/black"
+                android:textStyle="bold"
+                android:hint="dd-mm-yy"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Due Time"/>
+
+            <EditText
+                android:id="@+id/dueTime"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:textColorHint="@color/black"
+                android:textStyle="bold"
+                android:hint="0000h"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dateNtime"
+        android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/deleteBtn"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="10dp"
+        android:checkable="false"
+        android:fontFamily="@font/ibmplex_mono_semibold"
+        android:text="Delete"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:backgroundTint="#CCE5F6"
+        app:cornerRadius="8dp"
+        android:layout_weight="1"
+        android:layout_marginRight="20dp"
+        app:rippleColor="@color/dark_grey" />
+
+    <Button
+        android:id="@+id/saveBtn"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="10dp"
+        android:checkable="false"
+        android:fontFamily="@font/ibmplex_mono_semibold"
+        android:text="Save edits"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:backgroundTint="#CCE5F6"
+        app:cornerRadius="8dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="20dp"
+        app:rippleColor="@color/dark_grey" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
